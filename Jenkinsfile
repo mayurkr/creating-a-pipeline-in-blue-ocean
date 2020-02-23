@@ -10,7 +10,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'npm install'
-        slackSend()
+        slackSend(attachments: 'Hello World', channel: 'jenkins', blocks: 'Hello World')
       }
     }
 
